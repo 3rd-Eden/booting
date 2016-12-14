@@ -1,0 +1,41 @@
+{
+  "name": "booting",
+  "version": "1.0.0",
+  "description": "Async Initialization Process",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/destinythegame/booting.git"
+  },
+  "keywords": [
+    "booting",
+    "boot",
+    "boots",
+    "booter",
+    "bootloader",
+    "preboot",
+    "pre-boot",
+    "async",
+    "loading",
+    "bootstrap",
+    "loading",
+    "ready",
+    "pre-load"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/destinythegame/booting/issues"
+  },
+  "homepage": "https://github.com/destinythegame/booting#readme",
+  "dependencies": {
+    "one-time": "^0.0.4"
+  },
+  "devDependencies": {
+    "assume": "^1.4.1",
+    "mocha": "^3.2.0"
+  }
+}
