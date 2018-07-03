@@ -44,6 +44,39 @@ describe('booting', function () {
       });
     });
 
+    it('can execute sync when no next argument is supplied function', function () {
+      var boot = booting('data');
+      var called = false;
+
+      boot.use(function (data) {
+        assume(data).equals('data');
+        called = true;
+      });
+
+      assume(called).is.true();
+    });
+
+    it('works with async/await', function (next) {
+      function timeout(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      var boot = booting('waddup');
+      var called = false;
+
+      boot.use(async function (data) {
+        await timeout(10);
+        called = true;
+      });
+
+      assume(called).is.false();
+
+      setTimeout(function () {
+        assume(called).is.true();
+        next();
+      }, 20);
+    });
+
     it('can introduce another boot using `this`', function (next) {
       var boot = booting('data');
 

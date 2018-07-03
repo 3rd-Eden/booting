@@ -35,7 +35,7 @@
     "one-time": "^0.0.4"
   },
   "devDependencies": {
-    "assume": "^1.4.1",
-    "mocha": "^3.2.0"
+    "assume": "^2.1.0",
+    "mocha": "^5.2.0"
   }
 }
